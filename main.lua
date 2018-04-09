@@ -1,16 +1,20 @@
 local img
-local largeur, hauteur
+local width, height
 
 function love.load()
-  img = love.graphics.newImage("assets/images/personnage.png")
+    img = love.graphics.newImage("assets/images/personnage.png")
   
-  largeur = love.graphics.getWidth()
-  hauteur = love.graphics.getHeight()
+    width = love.graphics.getWidth()
+    height = love.graphics.getHeight()
   
-  print("Largeur : ",largeur)
-  print("hauteur : ",hauteur)
+    print("window width:", width)
+    print("window height:", height)
+end
+
+function love.update(dt)
+
 end
 
 function love.draw()
-  love.graphics.draw(img, largeur/2 - img:getWidth()/2, hauteur/2 - img:getHeight()/2)
+    love.graphics.draw(img, 100, 100)
 end
